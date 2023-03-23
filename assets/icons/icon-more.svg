@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+  <g id="Group_7" data-name="Group 7" transform="translate(-1953 -2543)">
+    <rect id="Rectangle_5" data-name="Rectangle 5" width="5" height="5" transform="translate(1953 2552)" fill="#202020"/>
+    <rect id="Rectangle_8" data-name="Rectangle 8" width="5" height="5" transform="translate(1962 2552)" fill="#202020"/>
+    <rect id="Rectangle_11" data-name="Rectangle 11" width="5" height="5" transform="translate(1971 2552)" fill="#202020"/>
+    <path id="Rectangle_7" data-name="Rectangle 7" d="M0,0H1A4,4,0,0,1,5,4V5A0,0,0,0,1,5,5H0A0,0,0,0,1,0,5V0A0,0,0,0,1,0,0Z" transform="translate(1953 2561)" fill="#202020"/>
+    <rect id="Rectangle_10" data-name="Rectangle 10" width="5" height="5" transform="translate(1962 2561)" fill="#202020"/>
+    <path id="Rectangle_13" data-name="Rectangle 13" d="M4,0H5A0,0,0,0,1,5,0V5A0,0,0,0,1,5,5H0A0,0,0,0,1,0,5V4A4,4,0,0,1,4,0Z" transform="translate(1971 2561)" fill="#202020"/>
+    <path id="Rectangle_15" data-name="Rectangle 15" d="M4,0H5A0,0,0,0,1,5,0V5A0,0,0,0,1,5,5H0A0,0,0,0,1,0,5V4A4,4,0,0,1,4,0Z" transform="translate(1971 2561)" fill="#202020"/>
+    <path id="Rectangle_6" data-name="Rectangle 6" d="M0,0H5A0,0,0,0,1,5,0V1A4,4,0,0,1,1,5H0A0,0,0,0,1,0,5V0A0,0,0,0,1,0,0Z" transform="translate(1953 2543)" fill="#202020"/>
+    <rect id="Rectangle_9" data-name="Rectangle 9" width="5" height="5" transform="translate(1962 2543)" fill="#202020"/>
+    <path id="Rectangle_14" data-name="Rectangle 14" d="M0,0H5A0,0,0,0,1,5,0V5A0,0,0,0,1,5,5H4A4,4,0,0,1,0,1V0A0,0,0,0,1,0,0Z" transform="translate(1971 2543)" fill="#202020"/>
+  </g>
+</svg>
