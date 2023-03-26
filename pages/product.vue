@@ -3,17 +3,18 @@
     <Header />
     <div class="container-main">
       <div class="container-image">
-        <img src="#" alt="image-product" />
+        <img :src="dataProduct.image" alt="image-product" />
       </div>
       <div class="container-info">
         <p class="container-info--p-main">
-          Like other Crypts, it grows at a moderate rate and can be grown both
-          submerged and emerged.
+          {{ dataProduct.advertising }}
         </p>
-        <h1>Cryptocoryne Wendtii ‘Green Gecko’</h1>
+        <h1>{{ dataProduct.name }}</h1>
         <div class="price">
-          <h3>$129</h3>
-          <p>(4.8 stars) • 10 reviews</p>
+          <h3>{{ dataProduct.price }}</h3>
+          <p>
+            ({{ dataProduct.stars }} stars) • {{ dataProduct.reviews }} reviews
+          </p>
         </div>
 
         <div class="buttons">
@@ -37,6 +38,13 @@
 <script setup>
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
+import { onBeforeMount, ref } from "vue";
+
+const dataProduct = ref(null);
+
+onBeforeMount(async () => {
+  dataProduct.value = JSON.parse(localStorage.getItem("product"));
+});
 </script>
 
 <style scoped>

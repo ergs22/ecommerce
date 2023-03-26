@@ -4,12 +4,17 @@
       <img src="../assets/icons/icon-filter.svg" alt="icon-filters" /> Filtros
     </button>
 
-    <div class="options">
-      <p>Ver todo</p>
-      <p>JJeans</p>
-      <p>Shorts</p>
-      <p>Chaquetas</p>
-      <p>Collares</p>
+    <div class="options" ref="optionsBox">
+      <p
+        @click="sectionSelected"
+        :key="cat.title"
+        v-bind:style="
+          cat.title === 'Ver todos' ? 'font-weight:bold' : 'font-weight:normal'
+        "
+        v-for="cat in props.data"
+      >
+        {{ cat.title }}
+      </p>
     </div>
     <p>
       Buscar por
@@ -20,8 +25,21 @@
 
 <script setup>
 import { ref } from "vue";
-const emits = defineEmits(["showFilter"]);
+const props = defineProps({
+  data: Array,
+});
+const emits = defineEmits(["showFilter", "actionsFiltersections"]);
+
 const filter = ref(false);
+const optionsBox = ref(null);
+
+function sectionSelected(e) {
+  const arraySections = [...optionsBox.value.childNodes];
+  arraySections.flatMap((el) => (el.style.fontWeight = "normal"));
+  e.target.style.fontWeight = "Bold";
+  emits("actionsFiltersections", e.target.textContent);
+}
+
 function showFilter() {
   filter.value ? (filter.value = false) : (filter.value = true);
   emits("showFilter", filter.value);
@@ -47,13 +65,11 @@ function showFilter() {
   display: flex;
   width: 30vw;
   justify-content: space-between;
+  align-items: center;
 }
 p {
   cursor: pointer;
-  width: 9vw;
   display: flex;
-  align-items: center;
-  height: 2rem;
 }
 
 p img {

@@ -1,7 +1,7 @@
 <template>
   <nuxt-link to="/product" class="container">
-    <div class="image-container">
-      <img src="#" alt="imagen-product" />
+    <div class="image-container" :key="props.subcategory" @click="showProduct">
+      <img :src="props.image" alt="imagen-product" />
     </div>
     <h1>{{ props.name }}</h1>
     <span>{{ props.variant }}</span>
@@ -10,12 +10,25 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
+
 const props = defineProps({
   name: String,
   variant: String,
   price: String,
   image: String,
+  subcategory: String,
+  reviews: String,
+  stars: String,
+  advertising: String,
 });
+
+const emits = defineEmits(["showProduct"]);
+const data = ref(props);
+
+function showProduct() {
+  emits("showProduct", data.value);
+}
 </script>
 
 <style scoped>
@@ -34,8 +47,12 @@ const props = defineProps({
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
-
+.image-container img {
+  width: 15vw;
+  height: 40vh;
+}
 h1 {
   font-size: 1.125rem;
   font-weight: 400;
